@@ -45,3 +45,9 @@ INNER JOIN comments
 ON posts.id = comments.posts_id
 WHERE posts.created_at < '2015-01-01';
 
+--9
+SELECT comments.*, posts.title as post_title, posts.url as post_url, comments.body as comment_body
+FROM posts
+INNER JOIN comments
+ON posts.id = comments.posts_id
+WHERE posts.created_at > '2015-01-01';
