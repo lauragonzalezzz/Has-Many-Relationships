@@ -17,3 +17,10 @@ FROM posts
 INNER JOIN users
 ON users.id = posts.user_id
 WHERE users.first_name = 'Norene' AND users.last_name = 'Schmitt';
+
+--5
+SELECT users.username
+FROM posts
+INNER JOIN users
+ON users.id = posts.user_id
+WHERE posts.created_at >= '2015-01-01';
