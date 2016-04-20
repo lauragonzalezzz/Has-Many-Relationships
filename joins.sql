@@ -23,4 +23,11 @@ SELECT users.username
 FROM posts
 INNER JOIN users
 ON users.id = posts.user_id
-WHERE posts.created_at >= '2015-01-01';
+WHERE posts.created_at > '2015-01-01';
+
+--6
+SELECT posts.title, posts.content, users.username
+FROM posts
+INNER JOIN users
+ON users.id = posts.user_id
+WHERE users.created_at > '2015-01-01';
