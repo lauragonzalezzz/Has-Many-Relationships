@@ -31,3 +31,10 @@ FROM posts
 INNER JOIN users
 ON users.id = posts.user_id
 WHERE users.created_at > '2015-01-01';
+
+--7
+SELECT comments.*, posts.title as PostTitle
+FROM comments
+INNER JOIN posts
+ON posts.id = comments.posts_id;
+
