@@ -95,3 +95,17 @@ ON users.id = posts.user_id
 INNER JOIN comments
 ON posts.id = comments.posts_id
 WHERE comments.user_id = posts.user_id;
+
+--2
+SELECT COUNT(comments)
+FROM comments
+INNER JOIN posts
+ON posts.id = comments.posts_id
+WHERE posts.created_at > '2015-07-14';
+
+--3
+SELECT COUNT(users)
+FROM users
+INNER JOIN comments
+ON users.id = comments.user_id
+WHERE comments.body LIKE '%programming%';
